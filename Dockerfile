@@ -19,11 +19,6 @@ RUN curl -fsL https://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_V
     && sbt sbtVersion
 
 RUN rm -rf /var/lib/apt/lists/* \
-    && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
-    && locale-gen en_US.UTF-8 \
     && rm -rf /etc/localtime \
     && ln -s /usr/share/zoneinfo/Asia/Harbin /etc/localtime
 
-ENV LC_ALL="en_US.UTF-8"
-ENV LANG="en_US.UTF-8"
-ENV LANGUAGE="en_US:en"
