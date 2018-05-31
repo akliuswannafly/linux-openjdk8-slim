@@ -19,6 +19,6 @@ RUN curl -fsL https://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_V
     && sbt sbtVersion
 
 RUN rm -rf /var/lib/apt/lists/* \
-    && rm -rf /etc/localtime \
-    && ln -s /usr/share/zoneinfo/Asia/Harbin /etc/localtime
+    && echo "Asia/Harbin" > /etc/timezone \
+    && dpkg-reconfigure --frontend noninteractive tzdata
 
