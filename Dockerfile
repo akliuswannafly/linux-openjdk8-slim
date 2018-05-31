@@ -16,9 +16,7 @@ RUN curl -fsL https://downloads.typesafe.com/scala/$SCALA_VERSION/scala-$SCALA_V
     && rm sbt-$SBT_VERSION.deb \
     && apt-get update \
     && apt-get install sbt \
-    && sbt sbtVersion
-
-RUN rm -rf /var/lib/apt/lists/* \
-    && echo "Asia/Harbin" > /etc/timezone \
-    && dpkg-reconfigure --frontend noninteractive tzdata
+    && sbt sbtVersion \
+    && rm -rf /var/lib/apt/lists/* \
+    && echo "Asia/Harbin" > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
 
