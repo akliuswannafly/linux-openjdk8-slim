@@ -1,0 +1,13 @@
+[repositories]
+  local
+  maven-central:http://registry-prod.appadhoc.com:30080/repository/maven-central/
+  maven-central-ivy:http://registry-prod.appadhoc.com:30080/repository/maven-central/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
+  release:http://registry-prod.appadhoc.com:30080/repository/release/
+  release-ivy:http://registry-prod.appadhoc.com:30080/repository/release/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext]
+  aliyun-nexus: http://maven.aliyun.com/nexus/content/groups/public/
+  typesafe-sbt-plugins:http://dl.bintray.com/sbt/sbt-plugin-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly
+  typesafe-ivy-releases: http://dl.bintray.com/typesafe/ivy-releases/, [organization]/[module]/[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly
+
+
+
+
